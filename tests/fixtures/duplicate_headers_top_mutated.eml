@@ -1,0 +1,12 @@
+From: Carol <carol@example.com>
+Subject: Duplicate header selection
+X-Trace: MUTATED-UNSIGNED-OCCURRENCE
+X-Trace: second-inserted-by-MTA-B
+Message-ID: <fixture-0003@example.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=default; q=dns/txt; h=from:subject:x-trace:message-id; bh=brtxWc18VxaHM3lpYrCLm7VF6akE12TNweuQKysRk6c=; b=aZ0CBQtojTBQng24xFi5zVdEWdx4sxSv46GG6q9gdWMJ13G6OazeVsBPFh2+N9cpwpT01ReG
+	FALlqI5zOzkgaz6MNIBQRQlPiFmDNaSxtiSDDnOJX3+ClPTBx2zKU3uWq/I68r1J8yU6Cq+J
+	GyKo8sja3t4f0ypvJZi8KIv+L0vBHMlxo86D4+4OiPngC3tind9NtBFRJ47temy/CIgo3Qm+
+	LVyuBZ7HkZ0T69pno2coAZEu3olKDNgG6oIffTXnmw9ehahZyeiGR0SMAnpjQ6Js0Xi+SPJj
+	C/dO4Tbj6TsUovEBgSplFIizUuMA5sTluxKnHATyXY1DbB+43Rs5oQ==
+
+bottom-up duplicate header fixture

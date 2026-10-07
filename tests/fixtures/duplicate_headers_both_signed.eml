@@ -1,0 +1,12 @@
+From: Carol <carol@example.com>
+Subject: Duplicate header selection
+X-Trace: first-inserted-by-MTA-A
+X-Trace: second-inserted-by-MTA-B
+Message-ID: <fixture-0003@example.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=default; q=dns/txt; h=from:subject:x-trace:x-trace:message-id; bh=brtxWc18VxaHM3lpYrCLm7VF6akE12TNweuQKysRk6c=; b=YYL4c4iOrE+NPgTdML03o3OJnGFtCbgKGQILdOdbqTWobvO79V7qVaJENoV6frSCnWDRbagE
+	KgGZ32oTwjJn0u+aAG3jIxegTUI513ZUD8FHwzjcB7OCpHbUm41Vo7WezBj0/CDySLXqAQQq
+	qipuFz+rrctqbSDCUnts66flf+9D87P0//e2Nne9ns8weU0LQvPBbGg+5ULNSs75Q9RZBhSt
+	YpRl2WTilMrupYdSJrBfHuf4u4rOGHWrYipkSlU9HH05ykIIRSOUshrDqcYiJVkUw18ECkaC
+	2a+ekR6ckSB56zfIqC3ggl3LAmrUC71TPniAJNH6IX2xhxeP3L4eDQ==
+
+bottom-up duplicate header fixture

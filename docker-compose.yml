@@ -1,0 +1,50 @@
+# Compose for the forensic DKIM re-verification gateway.
+#
+# Host-side published port is configurable via DKIM_HOST_PORT:
+#   DKIM_HOST_PORT=18080 docker compose up --build
+#
+# Services:
+#   api     - long-running POST /api/dkim/audit service with a healthcheck
+#   verify  - one-shot job: waits for the API, runs unit tests + build
+#             sanity + HTTP smoke tests, then exits with an aggregate code
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dkim-audit:latest
+    ports:
+      - "${DKIM_HOST_PORT:-8080}:8080"
+    environment:
+      DKIM_LISTEN_HOST: "0.0.0.0"
+      DKIM_LISTEN_PORT: "8080"
+      DKIM_KEYRING: "/etc/dkim/keyring.json"
+    volumes:
+      # Operators can override the registered signing domains/selectors
+      # without rebuilding the image.
+      - ./config/keyring.json:/etc/dkim/keyring.json:ro
+    healthcheck:
+      test:
+        - "CMD"
+        - "python3"
+        - "-c"
+        - "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).status==200 else 1)"
+      interval: 10s
+      timeout: 3s
+      start_period: 5s
+      retries: 5
+    restart: unless-stopped
+
+  verify:
+    image: dkim-audit:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      DKIM_API_URL: "http://api:8080"
+    entrypoint: ["/srv/dkim/verify/entrypoint.sh"]
+    restart: "no"

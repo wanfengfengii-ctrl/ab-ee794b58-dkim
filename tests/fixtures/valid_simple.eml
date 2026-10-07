@@ -1,0 +1,9 @@
+From: Bob <bob@example.com>
+Subject: Simple canonicalization
+Message-ID: <fixture-0002@example.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=example.com; s=default; q=dns/txt; h=from:subject:message-id; bh=ZhLZyUwtqNJUThGINI/HuvcX//8brN5RkpoWZASkH/w=; b=GngI3TwQewzdPE1wN2ojvPKifAdfOsuSilS4VbYe+BgWS/bECVWevNHzy7rnCnlbLVBOivE8mcnFP728XHV2wQwZXybKjv3Xu2uDnhICn0CpaBpSUkOj3PdW3pl/V3EtK+noty/ecsnIuplxOXo5Woh0Q+Ze5Mly6O5MLpqHcAxOgJrGZTh1An3thCeckEYGOog7GBUwcIYi1J/X6FdPdBHn5Ale4iouwHYe4YL69LazbApQmKAAqdMLYFHDPxZTx9joTFZv/PP3/M7KrfaN+zbC1EpoVYHuvQSSg/DR7syGRQYMia/Q+ZVGRW9vxVjSkDCdNxr9lw2A/At4FppuWw==
+
+line one
+line two
+
+

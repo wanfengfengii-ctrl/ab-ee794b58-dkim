@@ -1,0 +1,16 @@
+From: Alice Analyst <alice@example.com>
+To: archive@forensic.example
+Subject: Quarterly report	attachment
+Date: Tue, 07 Oct 2026 10:00:00 +0000
+Message-ID: <fixture-0001@example.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=default; q=dns/txt; h=from:to:subject:date:message-id; bh=nfqVMmjxjvgocugrp1Oyuhpq9NY2KoVGuhGip46rEU8=; b=LqU3UD+SSfY9FMNgPDzECfAM+Av0QDJj32NJKPpaa/zJic9w/8rY1gaxnh5/MdvnqNTs/DC+
+	aWpwBcQZKI7bqEq/r88gvCuUtEToUz56BXMk3P+Sidf8QbVITwX4dVhcnz7l3ev6OZ2qkOtF
+	h3xsg8YrwuCblXr+Nu0IFm73EEYey8Drh3eFzKQ54KNy9P+M7uJKqX8EdGKHQyiN4ti2XFXU
+	BOCTM0OuUsx9EQqSIxgapI2mvbGb643TY1Gnz2LcJdLKVDO10xYeOu3ObOY+7XlGaEmwgsi5
+	4k8Bs5agAVijpUXOyyEoCQ7PQBsAkjdLUPIuEZclGktu3TZHuba+Vw==
+
+Hello archive team,
+
+Please retain this message.
+-- 
+Alice

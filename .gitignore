@@ -11,3 +11,6 @@ __pycache__/
 .nox/
 .pnpm-store/
 *.py[cod]
+
+# DKIM test private keys must never be committed
+tests/fixtures/keys/*.key.pem

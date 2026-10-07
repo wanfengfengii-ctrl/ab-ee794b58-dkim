@@ -1,0 +1,8 @@
+{
+  "example.com": {
+    "default": {
+      "p": "MIIBCgKCAQEAiqJdOew167KpvAjn8TcEJyILhZaYe2DrnAuRfqs07LR5A9ytLXRiAmuSOh3zirceA0lqxv3CQbL64RqhOHm5gY/w/D3Pejdy/1vOLzbyTvOgLHqbk58mp6UIEvkaQuTmb5OOo4bcqyD7gcN9TSBXXG5QJCnLurZ7IFJiNXaVMMtUlzCyIj4BdAZu/l00oCrNaM8z6/me/GHhdFZjPn4iFzzdSwWJTNOZ5MaH5VjLKOvu7D3FhaVmeOZbNVj5WArYHZmArZSUJv40H1ylfKOCFIVTqQRRoQ2bJM9P+N84sx9x10U2UBcxiKhpzom6r+NCX7m6fRloacJzfNc+GdIMIQIDAQAB",
+      "kty": "rsa"
+    }
+  }
+}
