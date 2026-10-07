@@ -1,0 +1,52 @@
+[
+  {
+    "archive": true,
+    "bodyReason": "OK",
+    "bodyVerdict": "pass",
+    "file": "valid.eml",
+    "name": "valid signature archives",
+    "signatureReason": "OK",
+    "signatureVerdict": "pass",
+    "status": 200
+  },
+  {
+    "archive": false,
+    "bodyReason": "BODY_HASH_MISMATCH",
+    "bodyVerdict": "fail",
+    "file": "body-rewritten.eml",
+    "name": "rewritten body rejected",
+    "signatureReason": "OK",
+    "signatureVerdict": "pass",
+    "status": 200
+  },
+  {
+    "archive": false,
+    "bodyReason": "ERR_HEADER_INSTANCES_NOT_FULLY_SIGNED",
+    "bodyVerdict": "fail",
+    "file": "duplicate-header.eml",
+    "name": "stacked duplicate From rejected",
+    "signatureReason": "ERR_HEADER_INSTANCES_NOT_FULLY_SIGNED",
+    "signatureVerdict": "fail",
+    "status": 200
+  },
+  {
+    "archive": false,
+    "bodyReason": "ERR_KEY_NOT_FOUND",
+    "bodyVerdict": "fail",
+    "file": "unknown-key.eml",
+    "name": "unknown key rejected",
+    "signatureReason": "ERR_KEY_NOT_FOUND",
+    "signatureVerdict": "fail",
+    "status": 200
+  },
+  {
+    "archive": false,
+    "bodyReason": "ERR_FORBIDDEN_BODY_LENGTH_TAG",
+    "bodyVerdict": "fail",
+    "file": "l-tag.eml",
+    "name": "l= tag rejected",
+    "signatureReason": "ERR_FORBIDDEN_BODY_LENGTH_TAG",
+    "signatureVerdict": "fail",
+    "status": 200
+  }
+]

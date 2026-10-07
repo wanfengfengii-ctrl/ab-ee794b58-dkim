@@ -1,0 +1,39 @@
+name: dkim-audit
+
+services:
+  api:
+    build:
+      context: .
+      target: api
+    image: dkim-audit-api:latest
+    environment:
+      PORT: "8080"
+      DKIM_KEYS_FILE: /etc/dkim-audit/keys.json
+    volumes:
+      # RSA public keys registered by signing domain + selector.
+      - ./keys/keys.json:/etc/dkim-audit/keys.json:ro
+    ports:
+      # Host port is configurable: API_PORT=9000 docker compose up
+      - "${API_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+      start_period: 3s
+    restart: unless-stopped
+
+  verify:
+    build:
+      context: .
+      target: verify
+    image: dkim-audit-verify:latest
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      API_URL: http://api:8080
+      FIXTURES_DIR: /fixtures
+    # One-shot: runs go test, go build, then the HTTP smoke suite and exits
+    # with a summarizing exit code. Inspect with:
+    #   docker compose up --build --abort-on-container-exit --exit-code-from verify

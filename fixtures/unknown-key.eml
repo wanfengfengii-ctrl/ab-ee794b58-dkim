@@ -1,0 +1,13 @@
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=unknown.example; s=s1; h=from:to:subject:date:message-id:x-custom:x-custom; bh=bBKGb5+bDLqmTTedW2z/o2jXYmOVBFnS9QkoFHzf554=; b=fFfMuSNrbT9tr7B3Q53UyE7VPI88Jc/87PaTFwGZZB9NmXXhUZ04OWVv5uVPhlEEuttfcOMqS7E2SAN7kPBOV+FzZSPRXCoo7+HuOMV0P1dgJs7mMYNLod9YlIm4WJL9ykk/Gj9LbpgIVYRxuiNt7mZ/yY2MtV0OaMyd+e6fFdMXlVHZSS7bSodBclac5XcvwWj7e7F2wiVAGFClSd/oIvHy5XDAp7oo8rpI6MkCATATrrBt1ru/Ngba4zipNanVPlM/yOtM4ts2iDxdAi9kRb5NvSIsBBuKN5OD946V55RNRaX2PPDNDg8oCduKHy1qfeBBCGUffxZGyPj4YD6tzw==
+From: Alice <alice@example.com>
+To: Bob <bob@example.net>
+Subject: Forensic archive
+	intake report 2026
+Date: Tue, 07 Oct 2026 09:00:00 +0000
+Message-ID: <m1@example.com>
+X-Custom: one
+X-Custom: two
+
+Body line one.
+Body line two.
+

@@ -1,0 +1,10 @@
+{
+  "keys": [
+    {
+      "algorithm": "rsa-sha256",
+      "domain": "example.com",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwYsE/BRibnKpueKvRrLe\nXbraASB4tvsiu+Ji22ricchsdRnxTXBqCF4CN5vLps7+FF8IPvHy8XW55EYlfBfo\naAJ/fkB/zv1PSw9uvq7VHIbI/Xba8EXOaZovPtsmW1j0Vncdc5DsqkW209bGP2Jx\nOEr+q253j711xDAt+Pb+TVKGX+yG9GAVTp1b5LA6rhTdzhTTp/b59btDWLYiwF82\nLDrMRYukTYG4OwC6yjE1l00meGTv/MB721QG01o9srWGnUaR2OZHt51Geiziu/SD\nBf9zUSHgElTiurecSO/0inT04qh18aAXquD84EUFJvO6FXXZ3DSln/DT2dW1iIrj\nEQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "selector": "s1"
+    }
+  ]
+}

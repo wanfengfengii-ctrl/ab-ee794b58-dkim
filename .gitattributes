@@ -1,0 +1,2 @@
+# Raw email fixtures must keep their CRLF line endings byte-for-byte.
+*.eml -text
